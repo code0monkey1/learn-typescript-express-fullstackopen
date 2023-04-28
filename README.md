@@ -49,4 +49,4 @@
 
      > `module` tells the compiler that we want to use `CommonJS` modules in the compiled code. This means we can use the old require syntax instead of the import one, which is not supported in older versions of Node, such as version 10.
 
-     > `strict` is a shorthand for multiple separate options: `noImplicitAny, noImplicitThis, alwaysStrict, strictBindCallApply, strictNullChecks, strictFunctionTypes and strictPropertyInitialization`
+     > `strict` is a shorthand for multiple separate options: _noImplicitAny, noImplicitThis, alwaysStrict, strictBindCallApply, strictNullChecks, strictFunctionTypes and strictPropertyInitialization_
