@@ -61,4 +61,4 @@
 
      > `noFallthroughCasesInSwitch` ensures that, in a switch case, each case ends either with a return or a break statement.
 
-     > `esModuleInterop` allows interoperability between CommonJS and ES Modules 
+     > `esModuleInterop` allows interoperability between CommonJS and ES Modules. 
