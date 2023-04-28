@@ -160,4 +160,26 @@
       
        > A native runnable JavaScript production build of the Express backend is created in file `index.js` inside the directory `build`. 
      
-  1. Currently, if we run ESlint it will also interpret the files in the build      directory .   We don't want that, since the code there is compiler-generated. We can `prevent this` by creating a `.eslintignore` file that lists the content we want `ESlint to ignore`, just like we do with `git` and `.gitignore`.
+  1. Currently, if we run ESlint it will also interpret the files in the build      directory .   We don't want that, since the code there is compiler-generated. We can `prevent this` by `creating` a `.eslintignore` file that lists the content we want `ESlint to ignore`.
+    
+     ```json
+       // .eslintignore
+        build  //add this to the newly created .eslintignore file
+     
+     ```
+    
+  
+  2. Add an npm script in `package.json` for running the application in production mode
+   
+      ```json
+             {
+          // ...
+          "scripts": {
+            "tsc": "tsc",
+            "dev": "ts-node-dev index.ts",
+            "lint": "eslint --ext .ts .",
+            "start": "node build/index.js"
+          },
+          // ...
+        }
+      ```
