@@ -151,5 +151,13 @@
          
         }
      ```
-
+   
+  1. Create a `Production Build` by running the TypeScript compiler  :
+      
+      `npm run tsc`
+  
+       >  Since we have defined the `outdir` in our `tsconfig.json`, nothing's left but to run the script `npm run tsc`.
+      
+       > A native runnable JavaScript production build of the Express backend is created in file `index.js` inside the directory `build`. 
      
+  1. Currently, if we run ESlint it will also interpret the files in the build      directory .   We don't want that, since the code there is compiler-generated. We can `prevent this` by creating a `.eslintignore` file that lists the content we want `ESlint to ignore`, just like we do with `git` and `.gitignore`.
