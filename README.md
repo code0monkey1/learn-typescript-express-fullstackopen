@@ -185,3 +185,25 @@
           // ...
         }
       ```
+  1. Finally run the app in production mode by running the script `npm run start` and confirm that the app is running successfully in production, by adding the following started code to `index.ts` and compiling it.
+     
+  > IMP : Before executing  `npm run start` , do run the `npm run tsc` script to compile the `.ts` code to `.js` code first.
+   
+  ```javascript
+               
+        import express from 'express';
+        const app = express();
+        app.use(express.json());
+        
+        const PORT = 3000;
+        
+        app.get('/ping', (_req, res) => {
+          console.log('someone pinged here');
+          res.send('pong');
+        });
+        
+        app.listen(PORT, () => {
+          console.log(`Server running on port ${PORT}`);
+        });
+
+  ```
