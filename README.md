@@ -72,14 +72,14 @@
       > Confirm that the `package.json` looks like the following :
           
             {
-                "name": "flight_diary",
+                "name": "whatever",
                 "version": "1.0.0",
                 "description": "",
                 "main": "index.js",
                 "scripts": {
                   "tsc": "tsc"
                 },
-                "author": "Jane Doe",
+                "author": "",
                 "license": "ISC",
                 "devDependencies": {
                   "@types/express": "^4.17.13",
@@ -92,3 +92,41 @@
                   "express": "^4.17.3"
                 }
           }
+  1.  Create an `.eslintrc` file with the following settings : 
+      
+      ```json 
+
+        {
+        "extends": [
+          "eslint:recommended",
+          "plugin:@typescript-eslint/recommended",
+          "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        ],
+        "plugins": ["@typescript-eslint"],
+        "env": {
+          "browser": true,
+          "es6": true,
+          "node": true
+        },
+        "rules": {
+          "@typescript-eslint/semi": ["error"],
+          "@typescript-eslint/explicit-function-return-type": "off",
+          "@typescript-eslint/explicit-module-boundary-types": "off",
+          "@typescript-eslint/restrict-template-expressions": "off",
+          "@typescript-eslint/restrict-plus-operands": "off",
+          "@typescript-eslint/no-unsafe-member-access": "off",
+          "@typescript-eslint/no-unused-vars": [
+            "error",
+            { "argsIgnorePattern": "^_" }
+          ],
+          "no-case-declarations": "off"
+        },
+        "parser": "@typescript-eslint/parser",
+          "parserOptions": {
+            "project": "./tsconfig.json"
+          }
+        }
+   
+      ```
+  1. install `ts-node-dev` as a dev dependency 
+      `npm install --save-dev ts-node-dev`
