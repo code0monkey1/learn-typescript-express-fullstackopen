@@ -3,9 +3,9 @@
 ## Config 
 
   ---
-        
+
   > Pro Tip : Take the time needed to create a good setup for yourself and your team, so that everything runs smoothly in the long run
-        
+
   ---
 
   1. Start a new express app:
@@ -14,7 +14,7 @@
         `npm install typescript --save-dev`
   
   1. TypeScript's Native Compiler `(tsc)` helps us initialize our project by generating our `tsconfig.json` file. `Add` the `tsc` command to the list of executable `scripts` in `package.json`, like so :
-   
+
       ```json
        {
         // ..
@@ -24,7 +24,9 @@
         // ..
       }
       ```
+
       > The bare tsc command is often added to scripts so that other scripts can use it.
+
   1. Now initialize our tsconfig.json settings by running:
 
        `npm run tsc -- --init`
@@ -160,16 +162,16 @@
       
        > A native runnable JavaScript production build of the Express backend is created in file `index.js` inside the directory `build`. 
      
-  1. Currently, if we run ESlint it will also interpret the files in the build      directory .   We don't want that, since the code there is compiler-generated. We can `prevent this` by `creating` a `.eslintignore` file that lists the content we want `ESlint to ignore`.
-    
-     ```json
-       // .eslintignore
-        build  //add this to the newly created .eslintignore file
-     
-     ```
-    
+  1.  Currently, if we run ESlint it will also interpret the files in the build      directory .   We don't want that, since the code there is compiler-generated. We can `prevent this` by `creating` a `.eslintignore` file that lists the content we want `ESlint to ignore`.
+      
+       ```json
+         // .eslintignore
+          build  //add this to the newly created .eslintignore file
+       
+       ```
+      
   
-  2. Add an npm script in `package.json` for running the application in production mode
+  1. `Add` an npm `script` in `package.json` for running the application in `Production Mode`
    
       ```json
              {
@@ -178,7 +180,7 @@
             "tsc": "tsc",
             "dev": "ts-node-dev index.ts",
             "lint": "eslint --ext .ts .",
-            "start": "node build/index.js"
+            "start": "npm run tsc && node build/index.js"
           },
           // ...
         }
