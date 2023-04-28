@@ -49,4 +49,16 @@
 
      > `module` tells the compiler that we want to use `CommonJS` modules in the compiled code. This means we can use the old require syntax instead of the import one, which is not supported in older versions of Node, such as version 10.
 
-     > `strict` is a shorthand for multiple separate options: _noImplicitAny, noImplicitThis, alwaysStrict, strictBindCallApply, strictNullChecks, strictFunctionTypes and strictPropertyInitialization_
+     > `strict` is a shorthand for multiple separate options: _noImplicitAny, noImplicitThis, alwaysStrict, strictBindCallApply, strictNullChecks, strictFunctionTypes and strictPropertyInitialization_.
+     >
+     > Using strict is suggested by the official *_[tsconfig documentation](https://www.staging-typescript.org/tsconfig#strict)_*
+
+     > `noUnusedLocals` prevents having unused local variables.
+     
+     > `noUnusedParameters` throws an error if a function has unused parameters
+
+     > `noImplicitReturns` checks all code paths in a function to ensure they return a value.
+
+     > `noFallthroughCasesInSwitch` ensures that, in a switch case, each case ends either with a return or a break statement.
+
+     > `esModuleInterop` allows interoperability between CommonJS and ES Modules 
