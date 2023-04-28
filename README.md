@@ -2,6 +2,12 @@
 
 ## Config 
 
+  ---
+        
+  > Pro Tip : Take the time needed to create a good setup for yourself and your team, so that everything runs smoothly in the long run
+        
+  ---
+
   1. Start a new express app:
        `run npm init -y`
   1. install the typescript package as a dev dependency.
@@ -128,5 +134,22 @@
         }
    
       ```
-  1. install `ts-node-dev` as a dev dependency 
+  1. install `ts-node-dev` as a dev dependency , for continuous refresh of save ( you could also alternatively use `nodemon` instead of `ts-node-dev`  )
+   
       `npm install --save-dev ts-node-dev`
+  
+  1. Now go to `package.json` and write down the scripts to run `development` and `linting`, like so :
+     
+     ```json
+        {
+    
+          "scripts": {
+            "tsc": "tsc",
+            "dev": "ts-node-dev index.ts",
+            "lint": "eslint --ext .ts ."
+          },
+         
+        }
+     ```
+
+     
