@@ -61,4 +61,34 @@
 
      > `noFallthroughCasesInSwitch` ensures that, in a switch case, each case ends either with a return or a break statement.
 
-     > `esModuleInterop` allows interoperability between CommonJS and ES Modules. 
+     > `esModuleInterop` allows interoperability between CommonJS and ES Modules.
+
+  1. Next, install `express` and the various `types` :
+
+     `npm install express`  
+
+      `npm install --save-dev eslint @types/express @typescript-eslint/eslint-plugin @typescript-eslint/parser` 
+
+      > Confirm that the `package.json` looks like the following :
+          
+            {
+                "name": "flight_diary",
+                "version": "1.0.0",
+                "description": "",
+                "main": "index.js",
+                "scripts": {
+                  "tsc": "tsc"
+                },
+                "author": "Jane Doe",
+                "license": "ISC",
+                "devDependencies": {
+                  "@types/express": "^4.17.13",
+                  "@typescript-eslint/eslint-plugin": "^5.12.1",
+                  "@typescript-eslint/parser": "^5.12.1",
+                  "eslint": "^8.9.0",
+                  "typescript": "^4.5.5"
+                },
+                "dependencies": {
+                  "express": "^4.17.3"
+                }
+          }
