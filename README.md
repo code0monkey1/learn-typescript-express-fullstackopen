@@ -180,7 +180,7 @@
             "tsc": "tsc",
             "dev": "ts-node-dev index.ts",
             "lint": "eslint --ext .ts .",
-            "start": "npm run tsc && node build/index.js"
+            "start": "node build/index.js"
           },
           // ...
         }
