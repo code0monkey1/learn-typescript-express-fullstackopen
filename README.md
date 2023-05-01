@@ -209,4 +209,6 @@
 
   ```
 
+ > Create a `.gitignore` file and add `node_modules` to it before committing to github
+
 ---
