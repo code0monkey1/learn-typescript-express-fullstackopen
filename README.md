@@ -186,10 +186,10 @@
           // ...
         }
       ```
-  1. Finally run the app in production mode by running the script `npm run start` and confirm that the app is running successfully in production, by adding the following started code to `index.ts` and compiling it.
-     
-  > IMP : Before executing  `npm run start` , do run the `npm run tsc` script to compile the `.ts` code to `.js` code first.
-   
+  1. Finally run the app in production mode by running the script `npm run start` and confirm that the app is running successfully in production, by adding the following starter code to `index.ts` and compiling it.
+
+  > IMP : Before executing  `npm run start` , do run the `npm run tsc` script to compile the `.ts` code to `.js` code first.   
+---
   ```javascript
                
         import express from 'express';
@@ -208,6 +208,8 @@
         });
 
   ```
+  ---
+
 
  > Create a `.gitignore` file and add `node_modules` to it before committing to github
 
