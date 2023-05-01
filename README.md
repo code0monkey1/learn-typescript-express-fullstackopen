@@ -209,13 +209,3 @@
   ```
 
 ---
-## Flight Diary Application 
-
-### Problem Statement : Ilari wants to be able to keep track of his experiences on his flight journeys.
-
-#### Diary entries contain : 
-
-1. The date of the entry
-1. Weather conditions (good, windy, rainy or stormy)
-1. Visibility (good, ok or poor)
-1. Free text detailing the experience
