@@ -136,11 +136,11 @@
         }
    
       ```
-  1. install `ts-node-dev` as a dev dependency , for continuous refresh of save ( you could also alternatively use `nodemon` instead of `ts-node-dev`  )
+  8. install `ts-node-dev` as a dev dependency , for continuous refresh on save.
    
       `npm install --save-dev ts-node-dev`
   
-  2. Now go to `package.json` and write down the scripts to run `development` and `linting`, like so :
+  9. Now go to `package.json` and write down the scripts to run `development` and `linting`, like so :
      
      ```json
         {
@@ -154,15 +154,16 @@
         }
      ```
    
-  3. Create a `Production Build` by running the TypeScript compiler  :
+  10. Create a `Production Build` by running the TypeScript compiler  : 
+      >  Imp : Make sure you have _At Least ONE_ `.ts` file before running this command ,else the compiler will complain
       
-      `npm run tsc`
+        Execute :  `npm run tsc`
   
        >  Since we have defined the `outdir` in our `tsconfig.json`, nothing's left but to run the script `npm run tsc`.
       
        > A native runnable JavaScript production build of the Express backend is created in file `index.js` inside the directory `build`. 
      
-  4.  Currently, if we run ESlint it will also interpret the files in the build  directory .   We don't want that, an it's `.js` code created by the compiler. We can `prevent this` by `creating` a `.eslintignore` file that lists the content we want `ESlint to ignore`.
+  11. Currently, if we run ESlint it will also interpret the files in the build  directory .   We don't want that, an it's `.js` code created by the compiler. We can `prevent this` by `creating` a `.eslintignore` file that lists the content we want `ESlint to ignore`.
       
        ```json
          // .eslintignore
