@@ -9,11 +9,11 @@
   ---
 
   1. Start a new express app:
-       `run npm init -y`
-  1. install the typescript package as a dev dependency.
+       `npm init -y`
+  2. install the typescript package as a dev dependency.
         `npm install typescript --save-dev`
   
-  1. TypeScript's Native Compiler `(tsc)` helps us initialize our project by generating our `tsconfig.json` file. `Add` the `tsc` command to the list of executable `scripts` in `package.json`, like so :
+  3. TypeScript's Native Compiler `(tsc)` helps us initialize our project by generating our `tsconfig.json` file. `Add` the `tsc` command to the list of executable `scripts` in `package.json`, like so :
 
       ```json
        {
@@ -27,11 +27,11 @@
 
       > The bare tsc command is often added to scripts so that other scripts can use it.
 
-  1. Now initialize our tsconfig.json settings by running:
+  4. Now initialize our tsconfig.json settings by running:
 
        `npm run tsc -- --init`
   
-  1. Let the initial `.tsconfig` file have the following values :
+  5. Let the initial `.tsconfig` file have the following values :
            
       ```json
                 {
@@ -71,7 +71,7 @@
 
      > `esModuleInterop` allows interoperability between CommonJS and ES Modules.
 
-  1. Next, install `express` and the various `types` :
+  6. Next, install `express` and the various `types` :
 
      `npm install express`  
 
@@ -100,7 +100,7 @@
                   "express": "^4.17.3"
                 }
           }
-  1.  Create an `.eslintrc` file with the following settings : 
+  7.  Create an `.eslintrc` file with the following settings : 
       
       ```json 
 
@@ -140,7 +140,7 @@
    
       `npm install --save-dev ts-node-dev`
   
-  1. Now go to `package.json` and write down the scripts to run `development` and `linting`, like so :
+  2. Now go to `package.json` and write down the scripts to run `development` and `linting`, like so :
      
      ```json
         {
@@ -154,7 +154,7 @@
         }
      ```
    
-  1. Create a `Production Build` by running the TypeScript compiler  :
+  3. Create a `Production Build` by running the TypeScript compiler  :
       
       `npm run tsc`
   
@@ -162,7 +162,7 @@
       
        > A native runnable JavaScript production build of the Express backend is created in file `index.js` inside the directory `build`. 
      
-  1.  Currently, if we run ESlint it will also interpret the files in the build  directory .   We don't want that, an it's `.js` code created by the compiler. We can `prevent this` by `creating` a `.eslintignore` file that lists the content we want `ESlint to ignore`.
+  4.  Currently, if we run ESlint it will also interpret the files in the build  directory .   We don't want that, an it's `.js` code created by the compiler. We can `prevent this` by `creating` a `.eslintignore` file that lists the content we want `ESlint to ignore`.
       
        ```json
          // .eslintignore
